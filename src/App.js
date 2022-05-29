@@ -33,7 +33,7 @@ function App() {
   function submit(e){
     e.preventDefault();
       // const response = axios.post(url,data,{headers:{"Content-Type" : "application/json"}});
-      axios.post("http://127.0.0.1:5000/predict", {
+      axios.post("https://flask-api-for-cars.herokuapp.com//predict", {
           disp:parseFloat(data.disp),
           mileage:parseFloat(data.mileage),
           cylin:parseFloat(data.cylin),
@@ -94,7 +94,7 @@ function App() {
       <Input transparent value={data.budget}  id="budget" onChange={(e)=>handle(e)} placeholder='Whats your Budget' style={{ border: "1px solid #fff", padding: "10px", borderRadius: "5px",  }} />
 
      <Button type='submit' style={{backgroundColor:"#349e63",color:"white",marginTop:"20px"}}>GET PREDICTION</Button>
-      <p className="sentiment-text" style={{ marginTop: "20px", color: "white",fontSize:"34px", fontFamily:"'Montserrat'" }}>No Prediction</p>
+      <p className="sentiment-text" style={{ marginTop: "20px", color: "white",fontSize:"24px", fontFamily:"'Montserrat'" }}>No Prediction</p>
     </div>
     </Form>
     </div>
